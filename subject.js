@@ -1,21 +1,30 @@
 /**
- * Observer pattern
+ * Subject
+ *
+ * Implementation of the observer pattern.
+ * Useful especially when used with self implemented MVC patterns.
  *
  * @autor frontend.zorro@gmail.com
  * @constructor
+ * @return 
  */
-var Subject = function() {
+function Subject() {
 
-	var _this = this;
-	
-	this.subscribers = [];
+	if (!(this instanceof Subject)) {
+		return new Subject();
+	}
+
+	var subscribers = [];
 
 	this.publish = function() {
-		for (var i = 0; i < _this.subscribers.length; i += 1)
-			_this.subscribers[i](arguments);
+		var i = subscribers.length;
+
+		while (i--) {
+			subscribers[i](arguments);
+		}
 	};
 
 	this.subscribe = function(callback) {
-		this.subscribers.push(callback);
+		subscribers.push(callback);
 	};
 };
