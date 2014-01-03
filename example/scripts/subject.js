@@ -2,7 +2,7 @@
  * Subject
  *
  * Implementation of the publish/subscribe pattern.
- * Useful especially when used with self implemented MVC patterns.
+ * Especially useful when used with self implemented MVC patterns.
  *
  * @autor frontend.zorro@gmail.com
  * @constructor
