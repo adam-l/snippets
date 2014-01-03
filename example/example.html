@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Subject - Implementation of publish/subscribe pattern</title>
+		<style type="text/css">
+			body {font-family: 'Arial'}
+			body>div {max-width: 960px; padding: 40px 0; margin: 0 auto}
+		</style>
+	</head>
+	<body>
+		<div>
+			<header>
+				<h1>Subject</h1>
+				<h2>Implementation of publish/subscribe pattern</h2>
+			</header>
+			
+			<p><a id="change-to-red" href="#">Click to change color to red</a></p>
+		</div>
+
+		<script src="scripts/subject.js"></script>
+		<script>
+			var link = document.getElementById('change-to-red'),
+				colorChangeEvent = new Subject(),
+				subscriber = function() {
+					alert('Now the link is red!');
+				};
+
+			link.onclick = function() {
+				if (link.style.color != 'red') {
+					link.style.color = 'red';
+					colorChangeEvent.publish();
+				}
+
+				return false;
+			};
+
+			colorChangeEvent.subscribe(subscriber);
+		</script>
+	</body>
+</html>
