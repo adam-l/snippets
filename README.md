@@ -2,7 +2,7 @@
 Snippet for implementation of publish/subscribe pattern.
 
 ## Purpose of snippet
-This snippet is especially useful when used with self implemented MVC patterns and was the main cause for creating it.
+This snippet is especially useful when working with self-implemented MVC patterns and it was originaly created for that reason.
 
 ## Usage
 The usage of the snippet is rather fairly easy and doesn't need a lot of explanation.

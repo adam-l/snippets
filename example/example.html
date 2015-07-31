@@ -19,13 +19,13 @@
 
 		<script src="scripts/subject.js"></script>
 		<script>
-			var link = document.getElementById('change-to-red'),
-				colorChangeEvent = new Subject(),
-				subscriber = function() {
+			var link 			 = document.getElementById('change-to-red'),
+				colorChangeEvent = new Subject,
+				subscriber 		 = function () {
 					alert('Now the link is red!');
 				};
 
-			link.onclick = function() {
+			link.onclick = function () {
 				if (link.style.color != 'red') {
 					link.style.color = 'red';
 					colorChangeEvent.publish();
